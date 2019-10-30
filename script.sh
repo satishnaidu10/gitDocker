@@ -1,6 +1,6 @@
 sudo docker stop $(sudo docker ps -a -q)
 sudo docker rm $(sudo docker ps -a -q)
-cd /home/ubuntu
+cd root/gitDocker/
 rm -rf dockerImageNode
 git clone https://github.com/satishnaidu10/dockerImageNode.git
 cd dockerImageNode
