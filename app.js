@@ -28,8 +28,22 @@ console.log("Received the message inside gitPush->"+ JSON.stringify(req.body));
 
 });
 
-
-
+app.get('/gitPush', function (req, res) {
+    console.log("Received the message inside gitPush->"+ JSON.stringify(req.body));
+    
+        cmd.get('bash script.sh',
+            function(err, data, stderr){
+                if (!err) {
+                   console.log('Error in Running the Code->',data)
+                } else {
+                   console.log('error', err)
+                }
+    
+            }
+        );
+    
+    
+    });
 
 
 app.listen(app.get('port'));
